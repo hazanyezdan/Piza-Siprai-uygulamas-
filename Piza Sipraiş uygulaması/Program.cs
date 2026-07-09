@@ -70,7 +70,7 @@ namespace PizzaMatik
                     Console.WriteLine("Lütfen sadece sayı giriniz!");
                 }
             }
-            //Boyut Secimi
+            //Boyut Secimi 
             bool boyutSecildi = false;
             while(!boyutSecildi)
             {
