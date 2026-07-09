@@ -14,7 +14,7 @@ namespace PizzaMatik
             SiparisYonetici siparisYoneticisi = new SiparisYonetici();
             bool uygulamaCalisiyor = true;
             Console.WriteLine("==========================");
-            Console.WriteLine("PIZZAMATIK OTOMASYONUNA");
+            Console.WriteLine("PIZZAMATIK OTOMASYONUNA HOŞGELDİNİZ");
             Console.WriteLine("==========================");
             while(uygulamaCalisiyor)
             {
