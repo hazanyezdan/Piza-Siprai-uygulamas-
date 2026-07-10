@@ -11,15 +11,18 @@ namespace PizzaMatik
     {
         // 1. ADIM: Sınıf seviyesinde (class içinde ama metotların dışında) tanımlıyoruz
         static Dictionary<int, Pizza> tumSiparisler = new Dictionary<int, Pizza>();
+       
         static Random rastgele = new Random();
+        static string isim;
+        static string telefon;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Lütfen İsminizi Yazın");
-            string isim = Console.ReadLine();
+             isim = Console.ReadLine();
 
             // İŞTE EKSİK OLAN KISIM BURASI:
-            string telefon = TelefonNumarasiAl();
+            telefon = TelefonNumarasiAl();
 
             //sipariş yöneticimizi başlatıyoruz
             SiparisYonetici siparisYoneticisi = new SiparisYonetici();
@@ -30,7 +33,7 @@ namespace PizzaMatik
             while (uygulamaCalisiyor)
             {
                 Console.WriteLine("\n ----ANA MENU----");
-                Console.WriteLine("1.Yeni Pizza Siparişi Oluşur");
+                Console.WriteLine("1.Yeni Pizza Siparişi Oluştur");
                 Console.WriteLine("2. Sipariş Numarası ile Sorgula");
                 Console.WriteLine("3. Sipariş Özetini Gör ");
                 Console.WriteLine("4.Çıkış");
@@ -214,6 +217,9 @@ namespace PizzaMatik
                 if (tumSiparisler.TryGetValue(arananNo, out Pizza bulunanPizza))
                 {
                 Console.WriteLine("\n ===== SİPARİŞ DETAYI =====");
+
+                Console.WriteLine($"Müşteri Adı: {isim}");
+                Console.WriteLine($"Telefon Numarası: {telefon}");
                 Console.WriteLine($"Sipariş Numarası:{arananNo}");
                 Console.WriteLine($"Açıklama:{bulunanPizza.Aciklama}");
                 Console.WriteLine($"Fiyat:{bulunanPizza.Fiyat}TL");
